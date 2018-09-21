@@ -1,4 +1,4 @@
-Microservice Kubernetes Sample
+Microservice Kubernetes Integration
 =====================
 
 This demo uses [Kubernetes](https://kubernetes.io/) as Docker
