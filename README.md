@@ -24,7 +24,6 @@ The microservices are:
 - [microservice-kubernetes-demo-customer](microservice-kubernetes-demo/microservice-kubernetes-demo-customer) is responsible for customers.
 - [microservice-kubernetes-demo-order](microservice-kubernetes-demo/microservice-kubernetes-demo-order) does order processing. It uses
   microservice-kubernetes-demo-catalog and microservice-kubernetes-demo-customer.
-  Hystrix is used for resilience.
 
 The microservices use REST to communicate to each other.
 See e.g. [CatalogClient](microservice-kubernetes-demo/microservice-kubernetes-demo-order/src/main/java/com/ewolff/microservice/order/clients/CatalogClient.java) .
