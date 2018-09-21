@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.ewolff</groupId>
+		<groupId>com.cts</groupId>
 		<artifactId>microservice-kubernetes-demo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>microservice-kubernetes-demo-order</artifactId>
+	<artifactId>microservice-order</artifactId>
 
 	<dependencies>
 
