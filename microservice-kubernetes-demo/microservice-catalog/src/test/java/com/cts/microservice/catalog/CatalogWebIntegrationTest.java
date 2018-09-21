@@ -1,4 +1,4 @@
-package com.ewolff.microservice.catalog;
+package com.cts.microservice.catalog;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
