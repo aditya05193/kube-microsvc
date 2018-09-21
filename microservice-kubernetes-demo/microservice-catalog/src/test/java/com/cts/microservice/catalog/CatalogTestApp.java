@@ -1,4 +1,4 @@
-package com.ewolff.microservice.catalog;
+package com.cts.microservice.catalog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
