@@ -1,4 +1,4 @@
-package com.microservice.order.logic;
+package com.cts.microservice.order.logic;
 
 import java.util.Collection;
 
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.microservice.order.clients.CatalogClient;
-import com.microservice.order.clients.Customer;
-import com.microservice.order.clients.CustomerClient;
-import com.microservice.order.clients.Item;
+import com.cts.microservice.order.clients.CatalogClient;
+import com.cts.microservice.order.clients.Customer;
+import com.cts.microservice.order.clients.CustomerClient;
+import com.cts.microservice.order.clients.Item;
 
 @Controller
 class OrderController {
