@@ -1,4 +1,4 @@
-package com.microservice.catalog;
+package com.cts.microservice.catalog;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
