@@ -1,4 +1,4 @@
-package com.ewolff.microservice.order.logic;
+package com.cts.microservice.order.logic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,9 +7,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.microservice.order.OrderApp;
-import com.microservice.order.clients.Customer;
-import com.microservice.order.clients.CustomerClient;
+import com.cts.microservice.order.OrderApp;
+import com.cts.microservice.order.clients.Customer;
+import com.cts.microservice.order.clients.CustomerClient;
 
 import java.util.Collection;
 
@@ -29,12 +29,12 @@ public class CustomerConsumerDrivenContractTest {
 		assertEquals(
 				1,
 				result.stream()
-						.filter(c -> (c.getName().equals("Wolff")
-								&& c.getFirstname().equals("Eberhard")
+						.filter(c -> (c.getName().equals("kumar")
+								&& c.getFirstname().equals("Aditya")
 								&& c.getEmail().equals(
-										"eberhard.wolff@gmail.com")
-								&& c.getStreet().equals("Unter den Linden") && c
-								.getCity().equals("Berlin"))).count());
+										"aditya05193@gmail.com")
+								&& c.getStreet().equals("Hinjewadi") && c
+								.getCity().equals("Pune"))).count());
 	}
 
 	@Test
