@@ -1,4 +1,4 @@
-package com.microservice.order.logic;
+package com.cts.microservice.order.logic;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
