@@ -1,4 +1,4 @@
-package com.ewolff.microservice.catalog.cdc;
+package com.cts.microservice.catalog.cdc;
 
 import static org.junit.Assert.*;
 
