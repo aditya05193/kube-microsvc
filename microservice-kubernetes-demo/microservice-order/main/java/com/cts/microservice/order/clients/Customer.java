@@ -1,4 +1,4 @@
-package com.microservice.order.clients;
+package com.cts.microservice.order.clients;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
