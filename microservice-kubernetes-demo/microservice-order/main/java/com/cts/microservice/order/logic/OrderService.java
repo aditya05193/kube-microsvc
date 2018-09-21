@@ -1,10 +1,10 @@
-package com.microservice.order.logic;
+package com.cts.microservice.order.logic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.microservice.order.clients.CatalogClient;
-import com.microservice.order.clients.CustomerClient;
+import com.cts.microservice.order.clients.CatalogClient;
+import com.cts.microservice.order.clients.CustomerClient;
 
 @Service
 class OrderService {
