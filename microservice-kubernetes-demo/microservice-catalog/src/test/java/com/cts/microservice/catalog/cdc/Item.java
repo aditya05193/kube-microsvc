@@ -1,4 +1,4 @@
-package com.ewolff.microservice.catalog.cdc;
+package com.cts.microservice.catalog.cdc;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
