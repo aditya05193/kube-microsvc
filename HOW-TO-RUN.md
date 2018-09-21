@@ -1,23 +1,6 @@
-# How to Run
 
-This is a step-by-step guide how to run the example:
 
-## Installation
-
-* Install
-[minikube](https://github.com/kubernetes/minikube/releases). Minikube
-is a Kubernetes environment in a virtual machine that is easy to use
-and install. It is not meant for production but to test Kubernetes or
-for developer environments.
-
-* Install
-  [kubectl](https://kubernetes.io/docs/tasks/kubectl/install/). This
-  is the command line interface for Kubernetes.
-
-## Build the Docker images (optional)
-
-This step is *optional*. There are Docker images on the public Docker
-Hub that are used if you do not build your own.
+## Build the Docker images 
 
 * The example is implemented in Java. See
    https://www.java.com/en/download/help/download_options.xml . The
@@ -45,7 +28,6 @@ package` or `mvnw.cmd clean package` (Windows). This will take a while:
 [INFO] Reactor Summary:
 [INFO] 
 [INFO] microservice-kubernetes-demo ....................... SUCCESS [  0.986 s]
-[INFO] microservice-kubernetes-demo-hystrix-dashboard ..... SUCCESS [  2.494 s]
 [INFO] microservice-kubernetes-demo-customer .............. SUCCESS [ 16.953 s]
 [INFO] microservice-kubernetes-demo-catalog ............... SUCCESS [ 18.016 s]
 [INFO] microservice-kubernetes-demo-order ................. SUCCESS [ 18.512 s]
@@ -88,45 +70,9 @@ line.
 
 * Run `docker-build.sh` in the directory
 `microservice-kubernetes-demo`. It builds the images and uploads them to the
-Docker Hub using your account. Of course uploading the images takes
-some time:
+Docker Hub using your account. 
 
 ```
-[~/microservice-kubernetes/microservice-kubernetes-demo]export DOCKER_ACCOUNT=ewolff
-[~/microservice-kubernetes/microservice-kubernetes-demo]echo $DOCKER_ACCOUNT
-ewolff
-[~/microservice-kubernetes/microservice-kubernetes-demo]./docker-build.sh 
-...
-Removing intermediate container 36e9b0c2ac0e
-Successfully built b76261d1e4ee
-Successfully tagged microservice-kubernetes-demo-hystrix-dashboard:latest
-The push refers to a repository [docker.io/ewolff/microservice-kubernetes-demo-hystrix-dashboard]
-f4ffcb9c643d: Pushed 
-14c5bfa09694: Mounted from ewolff/microservice-kubernetes-demo-order 
-41a5c76632fc: Mounted from ewolff/microservice-kubernetes-demo-order 
-5bef08742407: Mounted from ewolff/microservice-kubernetes-demo-order 
-latest: digest: sha256:36d87ea5c8628da9a6677c1eafb9009c8f99310f5376872e7b9a1edace37d1a0 size: 1163
-```
-
-## Run the containers
-
-* Create a Minikube instance with `minikube start --memory=4000`. This
-  will set the memory of the Kubernetes VM to 4.000 MB - which should
-  be enough for most experiments:
-
-```
-[~/microservice-kubernetes]minikube start --memory=4000
-Starting local Kubernetes v1.7.5 cluster...
-Starting VM...
-Getting VM IP address...
-Moving files into cluster...
-Setting up certs...
-Connecting to cluster...
-Setting up kubeconfig...
-Starting cluster components...
-Kubectl is now configured to use the cluster.
-```
-
 * If you created your own Docker images: Ensure that the environment
 variable `DOCKER_ACCOUNT` is set to the name of the account on Docker
 Hub you created.
@@ -136,16 +82,12 @@ Hub you created.
 
 ```
 [~/microservice-kubernetes/microservice-kubernetes-demo]./kubernetes-deploy.sh
-deployment "apache" created
-service "apache" exposed
 deployment "catalog" created
 service "catalog" exposed
 deployment "customer" created
 service "customer" exposed
 deployment "order" created
 service "order" exposed
-deployment "hystrix-dashboard" created
-service "hystrix-dashboard" exposed
 ```
 
 That deploys the images. It creates Pods. Pods might contain one or
@@ -161,10 +103,8 @@ balancing. To actually view the services:
 ```
 [~/microservice-kubernetes/microservice-kubernetes-demo]kubectl get services
 NAME                CLUSTER-IP   EXTERNAL-IP   PORT(S)          AGE
-apache              10.0.0.90    <pending>     80:31214/TCP     46s
 catalog             10.0.0.219   <pending>     8080:30161/TCP   46s
 customer            10.0.0.163   <pending>     8080:30620/TCP   45s
-hystrix-dashboard   10.0.0.220   <pending>     8080:32076/TCP   44s
 kubernetes          10.0.0.1     <none>        443/TCP          3m
 order               10.0.0.21    <pending>     8080:30616/TCP   45s
 ```
@@ -197,10 +137,8 @@ Events:			<none>
 ```
 [~/microservice-kubernetes/microservice-kubernetes-demo]kubectl get pods
 NAME                                READY     STATUS    RESTARTS   AGE
-apache-3412280829-k5z5p             1/1       Running   0          2m
 catalog-269679894-60dr0             1/1       Running   0          2m
 customer-1984516559-1ffjk           1/1       Running   0          2m
-hystrix-dashboard-859915717-f0sxg   1/1       Running   0          2m
 order-2204540131-nks5s              1/1       Running   0          2m
 ```
 
@@ -265,28 +203,19 @@ mnt                                                      var
 / # 
 ```
 
-* Run `minikube service apache` to open the web page of the Apache httpd
-  server in the web browser. Notice how the service was bound to a
-  port on the host Minikube runs on.
 
 The service type is `LoadBalancer`. This should actually connect the
-service to an external load balancer. This does not work on minikube
-so it can only be accessed at a specific port on the minikube host.
+service to an external load balancer. 
 
 * To remove all services and deployments run `kubernetes-remove.sh`:
 
 ```
 [~/microservice-kubernetes/microservice-kubernetes-demo]./kubernetes-remove.sh 
-service "apache" deleted
+
 service "catalog" deleted
 service "customer" deleted
 service "order" deleted
-service "hystrix-dashboard" deleted
-deployment "apache" deleted
 deployment "catalog" deleted
 deployment "customer" deleted
 deployment "order" deleted
-deployment "hystrix-dashboard" deleted
 ```
-
-This skript must be executed before a new version of the pods can be deployed.
