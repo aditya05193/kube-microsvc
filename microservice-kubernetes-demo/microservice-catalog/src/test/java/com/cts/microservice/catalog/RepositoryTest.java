@@ -1,4 +1,4 @@
-package com.ewolff.microservice.catalog;
+package com.cts.microservice.catalog;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
@@ -22,8 +22,8 @@ public class RepositoryTest {
 	@Test
 	public void AreAllIPodReturned() {
 
-		//assertThat(itemRepository.findByNameContaining("iPhone"), hasSize(3));
-		//assertTrue(itemRepository.findByNameContaining("iPhone").stream().anyMatch(s -> s.getName().equals("Samsung")));
+		assertThat(itemRepository.findByNameContaining("iPhone"), hasSize(3));
+		assertTrue(itemRepository.findByNameContaining("iPhone").stream().anyMatch(s -> s.getName().equals("Samsung")));
 
 	}
 }
