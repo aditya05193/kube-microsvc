@@ -1,4 +1,4 @@
-package com.microservice.order.clients;
+package com.cts.microservice.order.clients;
 
 import java.util.Arrays;
 import java.util.Collection;
