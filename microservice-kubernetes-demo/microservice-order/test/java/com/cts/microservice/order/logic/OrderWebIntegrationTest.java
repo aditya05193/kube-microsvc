@@ -1,4 +1,4 @@
-package com.ewolff.microservice.order.logic;
+package com.cts.microservice.order.logic;
 
 import static org.junit.Assert.*;
 
@@ -18,13 +18,13 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-import com.microservice.order.OrderApp;
-import com.microservice.order.clients.CatalogClient;
-import com.microservice.order.clients.Customer;
-import com.microservice.order.clients.CustomerClient;
-import com.microservice.order.clients.Item;
-import com.microservice.order.logic.Order;
-import com.microservice.order.logic.OrderRepository;
+import com.cts.microservice.order.OrderApp;
+import com.cts.microservice.order.clients.CatalogClient;
+import com.cts.microservice.order.clients.Customer;
+import com.cts.microservice.order.clients.CustomerClient;
+import com.cts.microservice.order.clients.Item;
+import com.cts.microservice.order.logic.Order;
+import com.cts.microservice.order.logic.OrderRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT, classes = OrderApp.class)
