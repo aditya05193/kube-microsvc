@@ -53,7 +53,7 @@ public class OrderWebIntegrationTest {
 	public void setup() {
 		item = catalogClient.findAll().iterator().next();
 		customer = customerClient.findAll().iterator().next();
-		assertEquals("Aditya", customer.getFirstname());
+		assertEquals("kumar", customer.getFirstname());
 	}
 
 	@Test
