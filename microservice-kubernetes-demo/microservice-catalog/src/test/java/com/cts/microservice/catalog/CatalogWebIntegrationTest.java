@@ -21,9 +21,9 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
-import com.microservice.catalog.CatalogApp;
-import com.microservice.catalog.Item;
-import com.microservice.catalog.ItemRepository;
+import com.cts.microservice.catalog.CatalogApp;
+import com.cts.microservice.catalog.Item;
+import com.cts.microservice.catalog.ItemRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = CatalogApp.class, webEnvironment = WebEnvironment.RANDOM_PORT)
