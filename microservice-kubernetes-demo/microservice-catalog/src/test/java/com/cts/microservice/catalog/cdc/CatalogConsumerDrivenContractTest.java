@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.microservice.catalog.CatalogApp;
+import com.cts.microservice.catalog.CatalogApp;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = CatalogApp.class, webEnvironment = WebEnvironment.DEFINED_PORT)
