@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ewolff.microservice.customer.Customer;
-import com.ewolff.microservice.customer.CustomerRepository;
+import com.cts.microservice.customer.Customer;
+import com.cts.microservice.customer.CustomerRepository;
 
 @Controller
 public class CustomerController {
