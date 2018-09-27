@@ -1,4 +1,4 @@
-package com.microservice.customer;
+package com.cts.microservice.customer;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
