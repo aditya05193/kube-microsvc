@@ -1,4 +1,4 @@
-package com.microservice.customer;
+package com.cts.microservice.customer;
 
 import javax.annotation.PostConstruct;
 
