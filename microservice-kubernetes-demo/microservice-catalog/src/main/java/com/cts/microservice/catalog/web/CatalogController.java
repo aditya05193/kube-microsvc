@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ewolff.microservice.catalog.Item;
-import com.ewolff.microservice.catalog.ItemRepository;
+import com.cts.microservice.catalog.Item;
+import com.cts.microservice.catalog.ItemRepository;
 
 @Controller
 public class CatalogController {
